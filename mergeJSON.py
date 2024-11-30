@@ -22,14 +22,7 @@ def load_json_files(directory):
                     print(f"Ошибка при обработке файла {file_path}: {e}")
     return combined_data
 
-# Замените "your_directory_path" на путь к папке с вашими JSON-файлами
 directory_path = sys.argv[1]
 all_data = load_json_files(directory_path)
-
-# Пример печати результата
-#print(all_data)
-
 with open("jsonForArchive_" + directory_path + ".json", 'w', encoding='utf-8') as output_file:
     json.dump(all_data, output_file, ensure_ascii=False, indent=4)
-
-print(directory_path)
