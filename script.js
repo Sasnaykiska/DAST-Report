@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Регулярные выражения для поиска pg_sleep(6) и WAITFOR DELAY '0:0:6'
+    // Регулярные выражения для поиска 
     const pgSleepPattern = /pg_sleep\(6\)/g;
     const waitForDelayPattern = /WAITFOR DELAY/g;
     const selectPattern = /select/g;
