@@ -19,7 +19,7 @@ if (json_last_error() !== JSON_ERROR_NONE) {
     die('Ошибка при декодировании JSON: ' . json_last_error_msg());
 }
 
-// Открываем файл output.html для записи
+// Открываем html файл для записи
 $output_file = "dastReportForArchive".$dir.".html";
 $html = fopen($output_file, 'w');
 $html_content = <<<HTML
@@ -79,10 +79,9 @@ foreach ($data as $item) {
             <td style="max-width: 500px; word-wrap: break-word;">{$curl}</td>
         </tr>
 HTML;
-$id++; // Увеличиваем ID для следующей записи
+$id++; 
 }
 
-// Закрытие таблицы и HTML
 $html_content .= <<<HTML
           </tbody>
         </table>
@@ -93,7 +92,6 @@ $html_content .= <<<HTML
 </html>
 HTML;
 
-// Записываем весь HTML-контент в файл и закрываем его
 fwrite($html, $html_content);
 fclose($html);
 echo "Создан отчет dastReportForArchive".$dir.".html";
