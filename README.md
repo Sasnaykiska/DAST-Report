@@ -1,8 +1,8 @@
 # DAST-Report
 
-### Зависимости 
+### Предварительные условия 
 
-Предварительно нужно установить:
+Нужно установить:
 
 * [python3](https://docs.python.org/3/) 
 * [PHP](https://www.php.net/docs.php) 
