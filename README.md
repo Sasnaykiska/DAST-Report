@@ -2,7 +2,10 @@
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Предварительно нужно установить:
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - python3
+* [Maven](https://maven.apache.org/) - PHP
 
 ```
 Give examples
