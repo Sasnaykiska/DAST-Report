@@ -8,18 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const arraySortPattern = /arraySort/g;
     const sleepPattern = /sleep/g;
     const pingPattern = /ping/g;
+    const BadRequestPattern = /400 Bad Request/g;
 
 
 
     // Стиль подсветки для каждого типа
-    const pgSleepHighlight = `<span style="background-color: red; color: white; font-weight: bold;">pg_sleep(6)</span>`;
-    const waitForDelayHighlight = `<span style="background-color: red; color: white; font-weight: bold;">WAITFOR DELAY</span>`;
-    const selectHighlight = `<span style="background-color: red; color: white; font-weight: bold;">select</span>`;
-    const tsqlidslHighlight = `<span style="background-color: red; color: white; font-weight: bold;">tsqlidsl</span>`;
-    const SELECTlHighlight = `<span style="background-color: red; color: white; font-weight: bold;">SELECT</span>`;
-    const arraySortHighlight = `<span style="background-color: red; color: white; font-weight: bold;">arraySort</span>`;
-    const sleepHighlight = `<span style="background-color: red; color: white; font-weight: bold;">sleep</span>`;
-    const pingHighlight = `<span style="background-color: red; color: white; font-weight: bold;">sleep</span>`;
+    const pgSleepHighlight = `<span style="background-color: white; color: red; font-weight: bold;">pg_sleep(6)</span>`;
+    const waitForDelayHighlight = `<span style="background-color: white; color: red; font-weight: bold;">WAITFOR DELAY</span>`;
+    const selectHighlight = `<span style="background-color: white; color: red; font-weight: bold;">select</span>`;
+    const tsqlidslHighlight = `<span style="background-color: white; color: red; font-weight: bold;">tsqlidsl</span>`;
+    const SELECTlHighlight = `<span style="background-color: white; color: red; font-weight: bold;">SELECT</span>`;
+    const arraySortHighlight = `<span style="background-color: white; color: red; font-weight: bold;">arraySort</span>`;
+    const sleepHighlight = `<span style="background-color: white; color: red; font-weight: bold;">sleep</span>`;
+    const pingHighlight = `<span style="background-color: white; color: red; font-weight: bold;">sleep</span>`;
+    const BadRequestHighlight = `<span style="background-color: white; color: red; font-weight: bold;">400 Bad Request</span>`;
 
 
 
@@ -56,6 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (pingPattern.test(cell.innerHTML)) {
             cell.innerHTML = cell.innerHTML.replace(pingPattern, pingHighlight);
+        }
+
+        if (BadRequestPattern.test(cell.innerHTML)) {
+            cell.innerHTML = cell.innerHTML.replace(BadRequestPattern, BadRequestHighlight);
         }
     });
 });
