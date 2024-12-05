@@ -1,4 +1,13 @@
 # DAST-Report
+### Установить менеджер пакетов brew, если его еще нет
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Затем открыть файл .zhrc и вставить 
+```
+export PATH="/opt/homebrew/bin:$PATH"
+```
 
 ### Предварительные условия 
 
@@ -9,14 +18,6 @@
 
 ```
 brew install python3 && brew install php
-```
-
-### Зависимости  
-
-* json 
-
-```
-pip3 install json
 ```
 
 ### Запуск
