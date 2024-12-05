@@ -4,7 +4,7 @@
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-Затем открыть файл .zhrc и вставить 
+Затем открыть файл .zshrc и вставить 
 ```
 export PATH="/opt/homebrew/bin:$PATH"
 ```
