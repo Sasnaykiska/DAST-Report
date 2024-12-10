@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pingHighlight = `<span style="background-color: white; color: red; font-weight: bold;">sleep</span>`;
     const NotRequestHighlight = `<span style="background-color: white; color: red; font-weight: bold;">404 Not Found</span>`;
     const BadRequestHighlight = `<span style="background-color: white; color: red; font-weight: bold;">400 Bad Request</span>`;
-    const OkRequestHighlight = `<span style="background-color: white; color: red; font-weight: bold;">200 OK</span>`;
+    const OkRequestHighlight = `<span style="background-color: white; color: green; font-weight: bold;">200 OK</span>`;
     const UnRequestHighlight = `<span style="background-color: white; color: orange; font-weight: bold;">401 Unauthorized</span>`;
     const ForRequestHighlight = `<span style="background-color: white; color: orange; font-weight: bold;">403 Forbidden</span>`;
 
